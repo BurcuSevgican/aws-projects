@@ -38,22 +38,22 @@ def admin():
 #def greet(name):
     #return f'Hello, { name }'
 
-#@app.route('/<name>')
-#def greet(name):
- #   greet_format=f"""
-#<!DOCTYPE html>
-#<head>
- #   <title>Greeting Page</title>
-#</head>
-#<body>
+@app.route('/<name>')
+def greet(name):
+    greet_format=f"""
+<!DOCTYPE html>
+<head>
+   <title>Greeting Page</title>
+</head>
+<body>
  
- #   <h1>Hello, { name } ! </h1>
-  #  <h1>Welcome to my greeting page</h1>
-#</body>
-#</html>
+    <h1>Hello, { name } ! </h1>
+    <h1>Welcome to my greeting page</h1>
+</body>
+</html>
   
-  #  """
-  # return greet_format
+   """
+   return greet_format
 
 # Create a function named greet_admin which redirect the request to the hello path with param of 'Master Admin!!!!' 
 # and assign to the route of ('/greet-admin')
@@ -63,11 +63,11 @@ def greet_admin():
 
 # Rewrite a function named greet which which uses template file named `greet.html` under `templates` folder 
 # and assign to the dynamic route of ('/<name>')
-#@app.route('/<name>')
-#def greet(name):
- #   number1 = 23
-  #  number2 = 34
-   # return render_template('greet.html', isim = name, number1 = 23, number2 = 34, toplam = number1 + number2)
+@app.route('/<name>')
+def greet(name):
+    number1 = 23
+    number2 = 34
+    return render_template('greet.html', isim = name, number1 = 23, number2 = 34, toplam = number1 + number2)
 
 # Create a function named list10 which creates a list counting from 1 to 100 within `list100.html` 
 # and assign to the route of ('/list100')
